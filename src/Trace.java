@@ -23,6 +23,8 @@ public class Trace {
 		three = one + two;
 		what = (what + 2.5) / 2;
 		System.out.println(what + " is what!");
+
+		scan.close();
 	}
 
 }
