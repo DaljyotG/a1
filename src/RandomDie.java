@@ -1,29 +1,42 @@
+import java.util.Random;
 
-public class RandomDie 
+/**
+ * Simulates random die rolls
+ * 
+ * @author Daljyot
+ */
+public class RandomDie
+
 {
-	public static void main (String[] args)
-	{
-		Die die1, die2;
-		int sum;
-		
-		die1 = new Die();
-		die2 = new Die();
-		
-		die1.roll();
-		die2.roll();
-		sum= die1.roll() + die2.roll();
-		
-		System.out.println ("Die One: " + die1 + ", Die Two: " + die2);
-		System.out.println ("Sum: " + sum );
-		
-		sum= die1.roll() + die2.roll();
-		System.out.println("Die One: " + die1 + ", Die Two: " + die2);
-		System.out.println ("New sum: " + sum);
-		
-		 
-		
-	
 
-	
+	public static void main(String[] args)
+
+	{
+
+		int die1, die2;
+		int totalRoll;
+
+		die1 = diceRoll();
+		System.out.println("Die1 roll: " + die1);
+
+		die2 = diceRoll();
+		System.out.println("Die2 roll: " + die2);
+
+		totalRoll = (die1 + die2);
+		System.out.println("Total Roll:" + totalRoll);
+
 	}
+
+	/**
+	 * Single roll of a dice
+	 * 
+	 * @return the number rolled by the dice
+	 */
+	public static int diceRoll() {
+		Random genertator = new Random();
+		int die;
+		die = genertator.nextInt(6) + 1;
+		return die;
+	}
+
 }

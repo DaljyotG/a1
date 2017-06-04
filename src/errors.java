@@ -18,5 +18,6 @@ public class errors {
 
 		System.out.print(Name + " the square of your number is " + numSq);
 
+		scan.close();
 	}
 }
