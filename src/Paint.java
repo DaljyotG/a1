@@ -47,7 +47,7 @@ public class Paint {
 
 		// compute the amount of paint needed
 
-		paintNeeded = totalSqft / 350;
+		paintNeeded = totalSqft / COVERAGE;
 
 		// print the length, width, height of the room and the
 
@@ -63,6 +63,6 @@ public class Paint {
 		// _ gallons of paint needed to paint a room _ feet wide by
 
 		// _ feet long by _ feet high with _ doors and _ windows.
-
+		scan.close();
 	}
 }
